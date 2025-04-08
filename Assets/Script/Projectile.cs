@@ -1,3 +1,4 @@
+﻿using System.Collections;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -17,7 +18,17 @@ public class Projectile : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);    
         }
+    }
+    private void OnEnable()
+    {
+        StartCoroutine(DisableAfterTime(5f));
+    }
+
+    private IEnumerator DisableAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        gameObject.SetActive(false);
     }
 }

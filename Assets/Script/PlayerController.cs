@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
     public float offset;
 
     public Transform shotpoint;
-    public GameObject projectile;
     public float timeBetweenShots;
     float nextShotTime;
 
@@ -29,11 +28,18 @@ public class PlayerController : MonoBehaviour
         //shooting
         if (Input.GetMouseButton(0))
         {
-            if(Time.time> nextShotTime)
-            {
-                nextShotTime = Time.time+timeBetweenShots;
-                Instantiate(projectile,shotpoint.position,shotpoint.rotation);
-            }
+            Shooting();
+        }
+    }
+    void Shooting()
+    {
+        if (Time.time > nextShotTime)
+        {
+            nextShotTime = Time.time + timeBetweenShots;
+            GameObject bullet = ObjectPooling.Instance.GetPooledObject();
+            bullet.transform.position = shotpoint.position;
+            bullet.transform.rotation = shotpoint.rotation;
+            bullet.SetActive(true);
         }
     }
 }
