@@ -14,7 +14,10 @@ public class ZombieController : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position,player.position,speed*Time.deltaTime);
+        if (player != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position,player.position,speed*Time.deltaTime);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,7 +27,7 @@ public class ZombieController : MonoBehaviour
         }
         if(collision.tag == "Player")
         {
-            SceneManager.LoadScene("Game");
+            collision.GetComponent<PlayerHealth>()?.TakeDamage(2);
         }
     }
     void TakeDamage(int damageAmount)
