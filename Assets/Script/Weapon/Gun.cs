@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class Gun : MonoBehaviour, IWeapon
+public class Gun : MonoBehaviour
 {
-    [SerializeField] private WeaponInfo weaponInfo;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform shotPoint;
     public void Attack()
@@ -13,11 +12,6 @@ public class Gun : MonoBehaviour, IWeapon
             newBullet.transform.position = shotPoint.position;
             newBullet.transform.rotation = shotPoint.rotation;
             newBullet.SetActive(true);
-            newBullet.GetComponent<Projectile>().UpdateProjectileRange(weaponInfo.weaponRange);
         }
-    }
-    public WeaponInfo GetWeaponInfo()
-    {
-        return weaponInfo;
     }
 }

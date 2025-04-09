@@ -354,6 +354,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.000015259, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &296563802 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6216075245325154929, guid: c50554f6d443e704684563f0c93dec66, type: 3}
+  m_PrefabInstance: {fileID: 321611545}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &321611545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39176,8 +39181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -25}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 112.2, y: -22.557}
+  m_SizeDelta: {x: 200, y: 54.8852}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &519095640
 MonoBehaviour:
@@ -39234,7 +39239,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -39717,8 +39722,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -27}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 111.6, y: -27.6}
+  m_SizeDelta: {x: 200, y: 57.3054}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &768500085
 MonoBehaviour:
@@ -39775,7 +39780,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -40015,8 +40020,10 @@ MonoBehaviour:
   dashSpeed: 20
   dashDuration: 0.2
   dashCooldown: 1
-  timeBetweenShots: 1
   myTrailRenderer: {fileID: 1997107791}
+  weapon: {fileID: 321611546}
+  shotpoint: {fileID: 296563802}
+  timeBetweenShots: 0.3
 --- !u!114 &790359749
 MonoBehaviour:
   m_ObjectHideFlags: 0

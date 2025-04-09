@@ -14,7 +14,11 @@ public class ScoreManager : MonoBehaviour
     {
         Instance = this;    
     }
-
+    private void Update()
+    {
+        scoreText.text = " " + score;
+        killText.text = " " + kill;
+    }
     public void AddScore(int scoreAmount)
     {
         score += scoreAmount;
