@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Weapon
   - WeaponHold
+  - Gun
+  - ShotGun
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
 
     private void OnDisable()
     {
-        StopAllCoroutines(); // Dừng coroutine khi object bị tắt để tránh lỗi hoặc lãng phí tài nguyên
+        StopAllCoroutines(); 
     }
 
     void Update()

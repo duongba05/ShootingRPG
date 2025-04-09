@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 293612397873919635, guid: 3371a7a17c2d7814ca22d89d098f35f7, type: 3}
-  weaponCoolDown: 1
+  weaponCoolDown: 3
   weaponDamage: 2
   weaponRange: 5

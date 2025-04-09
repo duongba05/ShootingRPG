@@ -10,8 +10,6 @@ public class PlayerController : MonoBehaviour
 
     public Transform weapon;
     public Transform shotpoint;
-    public float timeBetweenShots;
-    float nextShotTime;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -40,11 +38,6 @@ public class PlayerController : MonoBehaviour
             Dash();
         }
 
-        if (Input.GetMouseButton(0))
-        {
-            ShootBullet();
-        }
-
         if (Input.GetKeyDown(KeyCode.Space) && Time.time >= lastDashTime + dashCooldown)
         {
             StartDash();
@@ -66,22 +59,6 @@ public class PlayerController : MonoBehaviour
         bool isMouseLeft = mousePos.x < transform.position.x;
         spriteRenderer.flipX = isMouseLeft;
         weaponRenderer.flipY = isMouseLeft;
-    }
-
-    void ShootBullet()
-    {
-        if (Time.time > nextShotTime)
-        {
-            nextShotTime = Time.time + timeBetweenShots;
-            GameObject bullet = ObjectPooling.Instance.GetPooledObject();
-
-            if (bullet != null)
-            {
-                bullet.transform.position = shotpoint.position;
-                bullet.transform.rotation = shotpoint.rotation;
-                bullet.SetActive(true);
-            }
-        }
     }
 
     void StartDash()

@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 691783889813284310}
   m_Layer: 0
   m_Name: Shotgun
-  m_TagString: Weapon
+  m_TagString: ShotGun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2312265907390106388
 Transform:
   m_ObjectHideFlags: 0
@@ -101,9 +101,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12705e698056dea4fbe57d59cef4650b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponInfo: {fileID: 11400000, guid: 283d789a9e409c14da69bf5a21a798bf, type: 2}
   bulletPrefab: {fileID: 5970385812707677349, guid: 147ddb45d7346d44c8dde213fae7b399, type: 3}
   shotPoint: {fileID: 2653925056244296834}
+  pelletCount: 5
+  spreadAngle: 30
+  timeBetweenShots: 3
 --- !u!1 &9035525185341339035
 GameObject:
   m_ObjectHideFlags: 0

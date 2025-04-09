@@ -5,7 +5,7 @@ public class ObjectPooling : MonoBehaviour
 {
     public static ObjectPooling Instance;
     public GameObject objectToPool;
-    public int poolSize = 10;
+    public int poolSize = 20;
     private List<GameObject> pool;
 
     private void Awake()
