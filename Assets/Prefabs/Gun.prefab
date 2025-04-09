@@ -132,6 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40e1bdea70c01a649b9fea209a703285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5970385812707677349, guid: 147ddb45d7346d44c8dde213fae7b399, type: 3}
+  weaponData: {fileID: 11400000, guid: 883b3bfe7081c1546bfd412d42ded26d, type: 2}
   shotPoint: {fileID: 6216075245325154929}
-  timeBetweenShots: 0.3

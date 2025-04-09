@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Projectile
   - Enemy
   - Weapon
   - WeaponHold
   - Gun
   - ShotGun
+  - Bullet
   layers:
   - Default
   - TransparentFX

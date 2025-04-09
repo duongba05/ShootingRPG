@@ -208,7 +208,6 @@ MonoBehaviour:
   maxHealth: 10
   healthSlider: {fileID: 378648802055135424}
   deadEffect: {fileID: 5335916647601457337, guid: 8930b09cb352d3d47999ea4d14d36c16, type: 3}
-  animator: {fileID: 2917033322971471081}
 --- !u!1001 &8155112704922285251
 PrefabInstance:
   m_ObjectHideFlags: 0

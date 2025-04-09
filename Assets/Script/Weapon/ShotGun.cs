@@ -12,7 +12,7 @@ public class Shotgun : MonoBehaviour, IWeapon
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time >= nextShotTime)
+        if (Input.GetMouseButton(0) && Time.time >= nextShotTime)
         {
             nextShotTime = Time.time + weaponData.weaponCoolDown;
             Attack();

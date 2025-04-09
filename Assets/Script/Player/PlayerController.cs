@@ -86,4 +86,10 @@ public class PlayerController : MonoBehaviour
             myTrailRenderer.emitting = false;
         }
     }
+    public void UpdateWeaponRenderer()
+    {
+        if (weapon != null)
+            weaponRenderer = weapon.GetComponent<SpriteRenderer>();
+    }
+
 }

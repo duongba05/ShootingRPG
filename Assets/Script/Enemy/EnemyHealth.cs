@@ -39,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Projectile")
+        if (collision.tag == "Bullet")
         {
             TakeDamage(collision.GetComponent<Projectile>().damage);
             animator.SetTrigger("Hit");
