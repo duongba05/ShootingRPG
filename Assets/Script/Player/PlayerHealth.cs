@@ -61,4 +61,11 @@ public class PlayerHealth : MonoBehaviour
         manaCurrent -= amount;
         manaCurrent = Mathf.Clamp(manaCurrent, 0, maxMana);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            TakeDamage(collision.GetComponent<ZombieController>().damage);
+        }
+    }
 }

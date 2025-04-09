@@ -5,11 +5,12 @@ public class Projectile : MonoBehaviour
 {
     public float speed;
     public int damage;
-    void Start()
+    public float projectileRange = 10f;
+    private Vector3 startPosition;
+    private void Start()
     {
-        
+        startPosition = transform.position;
     }
-
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -23,12 +24,13 @@ public class Projectile : MonoBehaviour
     }
     private void OnEnable()
     {
-        StartCoroutine(DisableAfterTime(5f));
+        if(Vector3.Distance(transform.position,startPosition) > projectileRange)
+        {
+            gameObject.SetActive(false);
+        }
     }
-
-    private IEnumerator DisableAfterTime(float time)
+    public void UpdateProjectileRange(float projectileRange)
     {
-        yield return new WaitForSeconds(time);
-        gameObject.SetActive(false);
+        this.projectileRange = projectileRange;
     }
 }
