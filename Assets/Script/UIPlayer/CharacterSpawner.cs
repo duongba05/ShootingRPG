@@ -2,7 +2,7 @@
 
 public class CharacterSpawner : MonoBehaviour
 {
-    public Transform spawnPoint; // điểm nhân vật xuất hiện
+    public Transform spawnPoint;
 
     void Start()
     {
@@ -10,7 +10,7 @@ public class CharacterSpawner : MonoBehaviour
 
         if (characterData != null)
         {
-            string prefabPath = "Player/" + characterData.characterName; // Ví dụ: Resources/Characters/Knight
+            string prefabPath = "Player/" + characterData.characterName;
             GameObject prefab = Resources.Load<GameObject>(prefabPath);
 
             if (prefab != null)

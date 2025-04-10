@@ -9,11 +9,10 @@ public class CharacterSelectionManager : MonoBehaviour
 
     private void Awake()
     {
-        // Đảm bảo chỉ có 1 instance (singleton)
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Giữ lại qua scene
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -24,6 +23,6 @@ public class CharacterSelectionManager : MonoBehaviour
     public void SetCurrentCharacter(CharacterData data)
     {
         currentSelectedCharacter = data;
-        PlayerPrefs.SetString("SelectedPrefab", data.characterName); // Lưu prefabName để dùng sau
+        PlayerPrefs.SetString("SelectedPrefab", data.characterName);
     }
 }
