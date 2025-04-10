@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1282831132008721068}
   - component: {fileID: -7822009147924741002}
   - component: {fileID: 104642042262392933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  health: 10
-  damage: 2
+  health: 150
+  damage: 10
 --- !u!50 &1282831132008721068
 Rigidbody2D:
   serializedVersion: 5
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3b9af078a0a914da5b01e192afe45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
   healthSlider: {fileID: 960965426929744521}
   deadEffect: {fileID: 5335916647601457337, guid: 1df7851d9070a6d4abcc315ad6a20706, type: 3}
 --- !u!1001 &8735844382846054026
@@ -307,6 +307,26 @@ PrefabInstance:
     - target: {fileID: 1897924100001149688, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897924100001149688, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725448232123345447, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486276700970957081, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922145020248735580, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622790558323628691, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

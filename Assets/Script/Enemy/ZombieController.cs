@@ -5,7 +5,6 @@ public class ZombieController : MonoBehaviour
 {
     public float speed;
     private Transform player;
-    public int health;
     public int damage;
     private SpriteRenderer spriteRenderer;
     void Start()

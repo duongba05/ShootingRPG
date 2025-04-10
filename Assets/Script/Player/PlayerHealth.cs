@@ -24,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
 
         healthSlider.maxValue = maxMana;
         manaSlider.value = manaCurrent;
-
     }
 
     private void Update()

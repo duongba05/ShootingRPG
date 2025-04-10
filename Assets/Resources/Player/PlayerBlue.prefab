@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380663a1d567dc042afa0d5c50e30401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 9
   dashSpeed: 20
   dashDuration: 0.2
   dashCooldown: 1
@@ -402,8 +402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bee0255e31bd5040a4cff14ead1d4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  maxMana: 10
+  maxHealth: 80
+  maxMana: 60
   healthSlider: {fileID: 4841065678652422057}
   manaSlider: {fileID: 2103655025243787799}
 --- !u!114 &6697026707709794162

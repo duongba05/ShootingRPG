@@ -8,7 +8,7 @@ public class CharacterData
     public int mana;
     public int speed;
     public string weaponName;
-    public int cooldown;
+    public float cooldown;
     public int lifesteal;
     public int damage;
     public int Range;

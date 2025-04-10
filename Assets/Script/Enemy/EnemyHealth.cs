@@ -41,7 +41,9 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.tag == "Bullet")
         {
-            TakeDamage(collision.GetComponent<Projectile>().damage);
+            //TakeDamage(collision.GetComponent<Projectile>().damage);
+            TakeDamage(collision.GetComponent<ExplosiveProjectile>().damage);
+
             animator.SetTrigger("Hit");
         }
     }
