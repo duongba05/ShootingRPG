@@ -9,5 +9,6 @@ public class PlayerButton : MonoBehaviour
     public void OnClickSelect()
     {
         uiManager.ShowCharacterData(characterData);
+        CharacterSelectionManager.Instance.SetCurrentCharacter(characterData);
     }
 }

@@ -337,7 +337,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 140108538}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1425966797}
+        m_TargetAssemblyTypeName: CharacterSelectionUI, Assembly-CSharp
+        m_MethodName: OnClickPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &140108538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData:
-    characterName: Tim
+    characterName: PlayerPurle
     health: 400
     mana: 40
     speed: 0
@@ -4498,7 +4510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData:
-    characterName: Pink
+    characterName: PlayerPink
     health: 200
     mana: 20
     speed: 0
@@ -4651,6 +4663,7 @@ GameObject:
   - component: {fileID: 870882919}
   - component: {fileID: 870882918}
   - component: {fileID: 870882917}
+  - component: {fileID: 870882920}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4732,6 +4745,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &870882920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870882916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &905611095
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,6 +5711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425966798}
   - component: {fileID: 1425966797}
+  - component: {fileID: 1425966799}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -5681,6 +5739,7 @@ MonoBehaviour:
   txtLifesteal: {fileID: 386852082}
   txtDamage: {fileID: 1042031947}
   txtRange: {fileID: 1012131414}
+  gameSceneName: Game
 --- !u!4 &1425966798
 Transform:
   m_ObjectHideFlags: 0
@@ -5696,6 +5755,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1425966799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425966796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd09560862698bc41a386fdcdff3e1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelectedCharacter:
+    characterName: 
+    health: 0
+    mana: 0
+    speed: 0
+    weaponName: 
+    cooldown: 0
+    lifesteal: 0
+    damage: 0
+    Range: 0
 --- !u!1 &1505537414
 GameObject:
   m_ObjectHideFlags: 0
@@ -6296,7 +6377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData:
-    characterName: Orange
+    characterName: PlayerOrange
     health: 300
     mana: 30
     speed: 0

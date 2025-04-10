@@ -12,15 +12,9 @@ public class MainMenu : MonoBehaviour
         PlayBtn.onClick.AddListener(PlayGame);
         ExitBtn.onClick.AddListener(ExitGame);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void PlayGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("SelectionCharacter");
     }
     void OptionsGame()
     {

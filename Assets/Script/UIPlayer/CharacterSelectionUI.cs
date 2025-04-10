@@ -1,5 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelectionUI : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class CharacterSelectionUI : MonoBehaviour
     public TextMeshProUGUI txtLifesteal;
     public TextMeshProUGUI txtDamage;
     public TextMeshProUGUI txtRange;
+
+    public string gameSceneName = "Game";
     public void ShowCharacterData(CharacterData data)
     {
         txtHealth.text = "Health: " + data.health;
@@ -21,5 +24,16 @@ public class CharacterSelectionUI : MonoBehaviour
         txtLifesteal.text = "Lifesteal: " + data.lifesteal;
         txtDamage.text = "Damage: " + data.damage;
         txtRange.text = "Range: " + data.Range;
+    }
+    public void OnClickPlay()
+    {
+        if (CharacterSelectionManager.Instance.currentSelectedCharacter != null)
+        {
+            SceneManager.LoadScene(gameSceneName);
+        }
+        else
+        {
+            Debug.LogWarning("Chưa chọn nhân vật!");
+        }
     }
 }
