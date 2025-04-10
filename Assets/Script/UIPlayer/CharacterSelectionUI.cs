@@ -19,7 +19,7 @@ public class CharacterSelectionUI : MonoBehaviour
         txtWeapon.text ="Weapon: " +data.weaponName;
         txtCooldown.text = "Cooldown: " + data.cooldown;
         txtLifesteal.text = "Lifesteal: " + data.lifesteal;
-        txtWeapon.text = "Damage: " + data.damage;
-        txtWeapon.text = "Range: " + data.Range;
+        txtDamage.text = "Damage: " + data.damage;
+        txtRange.text = "Range: " + data.Range;
     }
 }
