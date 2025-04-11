@@ -7,20 +7,22 @@ public class MainMenu : MonoBehaviour
     public Button PlayBtn;
     public Button OptionBtn;
     public Button ExitBtn;
-    void Start()
-    {
-        PlayBtn.onClick.AddListener(PlayGame);
-        ExitBtn.onClick.AddListener(ExitGame);
-    }
-    void PlayGame()
+    public Button CloseBtn;
+    public GameObject OptionPanel;
+    public void PlayGame()
     {
         SceneManager.LoadScene("SelectionCharacter");
     }
-    void OptionsGame()
+    public void OptionsGame()
     {
         Debug.Log("oPTIONS");
+        OptionPanel.SetActive(true);
     }
-    void ExitGame()
+    public void CloseButton()
+    {
+        OptionPanel.SetActive(false);
+    }
+    public void ExitGame()
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

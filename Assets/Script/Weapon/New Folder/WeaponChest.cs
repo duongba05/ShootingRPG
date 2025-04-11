@@ -18,7 +18,9 @@ public class WeaponChest : MonoBehaviour
 
         WeaponInfo randomWeapon = weaponList[Random.Range(0, weaponList.Length)];
 
-        GameObject dropped = Instantiate(droppedWeaponPrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
+        Vector3 jumpRandom = new Vector3(Random.Range(-1, 1), Random.Range(1, 2),0); 
+
+        GameObject dropped = Instantiate(droppedWeaponPrefab, transform.position + jumpRandom * 1.1f, Quaternion.identity);
         dropped.GetComponent<DroppedWeapon>().Setup(randomWeapon);
         Destroy(gameObject, 5f);
     }

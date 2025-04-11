@@ -8,7 +8,6 @@ public class DroppedWeapon : MonoBehaviour
     public GameObject pickupPromptUI;
 
     private bool playerInRange = false;
-
     public void Setup(WeaponInfo info)
     {
         weaponInfo = info;

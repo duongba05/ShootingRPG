@@ -6,7 +6,6 @@ public class LaserGun : MonoBehaviour, IWeapon
     [SerializeField] private Transform shotPoint;
     [SerializeField] private LineRenderer laserLine;
     [SerializeField] private float laserDuration = 0.1f;
-    [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private EdgeCollider2D edgeCollider;
 
     private float nextShotTime;
@@ -22,13 +21,18 @@ public class LaserGun : MonoBehaviour, IWeapon
 
     public void Attack()
     {
-        RaycastHit2D hit = Physics2D.Raycast(shotPoint.position, shotPoint.right, weaponData.weaponRange, enemyLayer);
+        RaycastHit2D hit = Physics2D.Raycast(shotPoint.position, shotPoint.right, weaponData.weaponRange);
+
         Vector3 endPos = shotPoint.position + shotPoint.right * weaponData.weaponRange;
 
         if (hit.collider != null)
         {
             endPos = hit.point;
-            hit.collider.GetComponent<EnemyHealth>()?.TakeDamage(weaponData.weaponDamage);
+
+            if (hit.collider.CompareTag("Enemy"))
+            {
+                hit.collider.GetComponent<EnemyHealth>()?.TakeDamage(weaponData.weaponDamage);
+            }
         }
 
         StartCoroutine(ShowLaser(endPos));
@@ -43,7 +47,7 @@ public class LaserGun : MonoBehaviour, IWeapon
 
         yield return new WaitForSeconds(laserDuration);
         laserLine.enabled = false;
-        edgeCollider.enabled=false;
+        edgeCollider.enabled = false;
     }
 
     public WeaponInfo GetWeaponInfo()

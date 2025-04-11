@@ -7,7 +7,6 @@ public class ExplosiveProjectile : MonoBehaviour
     public int damage = 10;
     public float range = 10f;
     public float explosionRadius = 2f;
-    public LayerMask enemyLayer;
     public GameObject explosionEffect;
 
     private Vector3 startPosition;
@@ -38,12 +37,17 @@ public class ExplosiveProjectile : MonoBehaviour
     void Explode()
     {
         if (explosionEffect != null)
+        {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        }
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyLayer);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<EnemyHealth>()?.TakeDamage(damage);
+            if (enemy.CompareTag("Enemy"))
+            {
+                enemy.GetComponent<EnemyHealth>()?.TakeDamage(damage);
+            }
         }
 
         Destroy(gameObject);

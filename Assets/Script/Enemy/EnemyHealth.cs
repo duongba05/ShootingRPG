@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
@@ -41,9 +41,19 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.tag == "Bullet")
         {
-            //TakeDamage(collision.GetComponent<Projectile>().damage);
-            TakeDamage(collision.GetComponent<ExplosiveProjectile>().damage);
-
+            ExplosiveProjectile explosive = collision.GetComponent<ExplosiveProjectile>();
+            if (explosive != null)
+            {
+                TakeDamage(explosive.damage);
+            }
+            else
+            {
+                Projectile normal = collision.GetComponent<Projectile>();
+                if (normal != null)
+                {
+                    TakeDamage(normal.damage);
+                }
+            }
             animator.SetTrigger("Hit");
         }
     }

@@ -520,6 +520,14 @@ PrefabInstance:
       propertyPath: weaponData
       value: 
       objectReference: {fileID: 11400000, guid: 883b3bfe7081c1546bfd412d42ded26d, type: 2}
+    - target: {fileID: 6216075245325154929, guid: c50554f6d443e704684563f0c93dec66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216075245325154929, guid: c50554f6d443e704684563f0c93dec66, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.092
+      objectReference: {fileID: 0}
     - target: {fileID: 8401346717839489609, guid: c50554f6d443e704684563f0c93dec66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.041999906

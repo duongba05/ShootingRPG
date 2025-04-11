@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 857415155994928459}
   - component: {fileID: 264877776150818301}
   - component: {fileID: 612201183790607487}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  health: 100
   damage: 5
 --- !u!114 &612201183790607487
 MonoBehaviour:
@@ -310,23 +309,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1897924100001149688, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3725448232123345447, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4486276700970957081, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4922145020248735580, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622790558323628691, guid: 1b5eca6bc9b5e7b4d94f3a87b0656580, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
